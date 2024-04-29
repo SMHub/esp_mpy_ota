@@ -24,8 +24,8 @@ oled_height = 64
 oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
 
 oled.text('TEST!', 0, 0)
-oled.text('NEW!', 0, 20)
-oled.text('CODE!', 0, 40)
+oled.text('IT!', 0, 20)
+oled.text('WORKS!', 0, 40)
         
 oled.show()
 
