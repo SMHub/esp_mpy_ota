@@ -10,3 +10,5 @@ ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
 
 ota_updater.download_and_install_update_if_available()
 
+print("Hello World!")
+
