@@ -26,9 +26,9 @@ while True:
     time.sleep(60)
     print("Hello World!")
     oled.fill(0)
-    oled.text('NEW----!', 0, 0)
-    oled.text('THU!----', 0, 20)
-    oled.text('5:32!----', 0, 40)
+    oled.text('----!', 0, 0)
+    oled.text('WORKED!----', 0, 20)
+    oled.text('5:43!----', 0, 40)
     oled.show()
 
 # OLED
