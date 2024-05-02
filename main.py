@@ -1,3 +1,4 @@
+import time
 
 from ota import OTAUpdater
 from WIFI_CONFIG import SSID, PASSWORD
@@ -9,9 +10,10 @@ firmware_url = "https://github.com/SMHub/esp_mpy_ota/"
 
 ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
 
-ota_updater.download_and_install_update_if_available()
-
-print("Hello World!")
+while True:
+    ota_updater.download_and_install_update_if_available()
+    time.sleep(60)
+    print("Hello World!")
 
 # OLED
 
