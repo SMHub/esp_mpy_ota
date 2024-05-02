@@ -10,25 +10,31 @@ firmware_url = "https://github.com/SMHub/esp_mpy_ota/"
 
 ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
 
-while True:
-    ota_updater.download_and_install_update_if_available()
-    time.sleep(60)
-    print("Hello World!")
-
-# OLED
-
-
-# ESP32 Pin assignment. Note: 4,5 for OLED with 18630
 i2c = SoftI2C(scl=Pin(4), sda=Pin(5))
 
 oled_width = 128
 oled_height = 64
 oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
 oled.fill(0)
-oled.text('FUN!', 0, 0)
-oled.text('THU!', 0, 20)
-oled.text('5:02!', 0, 40)
-        
+oled.text('CHECK----!', 0, 0)
+oled.text('FOR!----', 0, 20)
+oled.text('UPDATE!----', 0, 40)
 oled.show()
+
+while True:
+    ota_updater.download_and_install_update_if_available()
+    time.sleep(60)
+    print("Hello World!")
+    oled.fill(0)
+    oled.text('NEW----!', 0, 0)
+    oled.text('THU!----', 0, 20)
+    oled.text('5:32!----', 0, 40)
+    oled.show()
+
+# OLED
+
+
+# ESP32 Pin assignment. Note: 4,5 for OLED with 18630
+
 
 
